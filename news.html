@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | HGBaquiran College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="news-header">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="images/logo.png" alt="HGBaquiran College Logo"></a>
+                <div>
+                    <span class="logo-text">HGBaquiran College</span>
+                </div>
+            </div>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <span class="close-btn" onclick="hideMenu()">&times;</span>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="library.html">LIBRARY</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                    </ul>
+                </div>
+                <span class="menu-btn" onclick="showMenu()">&#9776;</span>
+                <div class="login-container">
+                    <div class="login-wrapper">
+                        <a href="#" class="login-link">LOG IN</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <h1>NEWSROOM</h1>
+    </section>
+
+
+    
+    <!-- PRIVACY POLICY CONTENT-->
+ 
+    
+      <!-- FOOTER FUSASIS-->
+   <!-- PRIVACY POLICY CONTENT -->
+    <section class="policy-us">
+        <!-- ... (privacy policy content) ... -->
+    </section>
+
+    <!-- FOOTER FUSASIS -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <div class="footer-text">HGBaquiran College, Inc., is located in Tumauini, Isabela, Philippines 3325.<br>It was established in 2005 and was the town of Tumauini's only college.<br>© 2024 All Rights Reserved.</div>
+
+        <!-- Updated href attribute for the privacy policy link -->
+        <p><a href="privacy policy.html" class="privacy-policy-link">PRIVACY POLICY</a></p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <p class="made">Made with ❤️ by <a href="fusasis.html" target="FUSASIS">FUSASIS</a></p>
+
+    </section>
+    
+    
+    
+    <!-- ... FUSASIS ...-->
+    
+    
+    
+    <!-- ... FUSASIS ...-->
+    <!-- ... JavaScript for Toggle Menu (please repair) FUSASIS ... -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const menuBtn = document.querySelector('.menu-btn');
+
+            menuBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+                closeBtn.classList.toggle('show');
+                document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
+            });
+
+            closeBtn.addEventListener('click', function () {
+                navLinks.classList.remove('show');
+                closeBtn.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var accordionBtns = document.querySelectorAll('.accordion-btn');
+
+    accordionBtns.forEach(function (accordionBtn) {
+        accordionBtn.addEventListener('click', function () {
+            var accordionContent = this.nextElementSibling;
+
+            accordionContent.classList.toggle('show');
+
+            // Close other accordions
+            accordionBtns.forEach(function (otherBtn) {
+                if (otherBtn !== accordionBtn) {
+                    otherBtn.nextElementSibling.classList.remove('show');
+                }
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>
+
