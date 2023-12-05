@@ -13,7 +13,7 @@ body {
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -714,8 +714,8 @@ h3 {
 .policy-header{
     height: 30vh;
     widows: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/blufad.jpg);
-    background-position: bottom;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/pp.jpg);
+    background-position: top;
     background-size: cover;
     text-align: center;
     color: #fff;
@@ -1314,3 +1314,4 @@ h3 {
         right: 20px;
     }
 }
+/* COOKIES*/
