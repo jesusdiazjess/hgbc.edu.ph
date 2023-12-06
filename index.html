@@ -53,9 +53,24 @@
     <h1>Welcome to HGBaquiran College</h1>
     <h1>The road to success is paved with good intentions.</h1>
     
-    <a href="https://youtu.be/HNR4RlT4z-8?feature=shared" class="hero-btn">
-        <div class="btn-container">Learn More</div>
-    </a>
+    <!-- VIDEO PLAYER LEARN MORE, FUSASIS -->
+<a href="#" id="openVideo" class="hero-btn">
+    <div class="btn-container">Learn More</div>
+</a>
+
+<div id="videoOverlay" class="overlay">
+    <div class="video-container">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HNR4RlT4z-8?rel=0&autoplay=1"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        <div id="closeVideo" class="close-btn">Close</div>
+    </div>
+</div>
+
 </div>
 
         </section>
@@ -122,7 +137,7 @@
             <div class="pvm-col">
                 <img src="images/gradiev.jpg">
                 <div class="layer">
-                    <h3>PHILOSOPHY<br>HGBaquiran College adopts its philosophy from that of Thyron Edward, American Theologian, which states thus; “The great end of education is, to discipline rather than to furnish the mind; to train it to the use of its own powers, rather than fill it with accumulation of others”</h3>
+                    <h3>PHILOSOPHY<br><br>HGBaquiran College adopts its philosophy from that of Thyron Edward, American Theologian, which states thus; “The great end of education is, to discipline rather than to furnish the mind; to train it to the use of its own powers, rather than fill it with accumulation of others”</h3>
                     
                 </div>
             </div>
@@ -130,14 +145,14 @@
              <div class="pvm-col">
                 <img src="images/gradiev.jpg">
                 <div class="layer">
-                    <h3>VISION<br>A well rounded human being. Equipped with the values, attitudes and skills that will enable him/her to be locally and globally competitive, live a productive life, contribute to nation building, and meet creatively and resourcefully the social and moral challenges of the world.</h3> 
+                    <h3>VISION<br><br>A well rounded human being. Equipped with the values, attitudes and skills that will enable him/her to be locally and globally competitive, live a productive life, contribute to nation building, and meet creatively and resourcefully the social and moral challenges of the world.</h3> 
                 </div>
             </div>
             
              <div class="pvm-col">
                 <img src="images/gradiev.jpg">
                 <div class="layer">
-                    <h3>MISSION<br>HGBaquiran College commits itself to offer quality education that would develop a well rounded human being who possesses desirable values, attitudes and skills thereby enabling him/her to be locally competitive, live a productive life, cope with the social and moral challenges of the modern world and be able to contribute to nation building.</h3>
+                    <h3>MISSION<br><br>HGBaquiran College commits itself to offer quality education that would develop a well rounded human being who possesses desirable values, attitudes and skills thereby enabling him/her to be locally competitive, live a productive life, cope with the social and moral challenges of the modern world and be able to contribute to nation building.</h3>
                 </div>
             </div>
         </div>
@@ -168,10 +183,19 @@
         <p><a href="privacy policy.html" class="privacy-policy-link">PRIVACY POLICY</a></p>
 
         <div class="icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-brands fa-youtube"></i>
-        </div>
+    <a href="https://www.facebook.com/hgbaquiran" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    
+    <a href="mailto:hgbcregistrar2011@yahoo.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    
+    <a href="https://www.youtube.com/your-youtube-channel" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+
         <p class="made">Made with ❤️ by <a href="fusasis.html" target="FUSASIS">FUSASIS</a></p>
 
     </section>
@@ -181,44 +205,57 @@
  
     
     <!-- ... JavaScript for Toggle Menu (please repair) FUSASIS ... -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the necessary elements
+        const closeBtn = document.querySelector('.close-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const menuBtn = document.querySelector('.menu-btn');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const closeBtn = document.querySelector('.close-btn');
-            const navLinks = document.querySelector('.nav-links');
-            const menuBtn = document.querySelector('.menu-btn');
+        // Function to toggle the navigation menu
+        function toggleNav() {
+            navLinks.classList.toggle('show');
+            closeBtn.classList.toggle('show');
+            document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
+        }
 
-            menuBtn.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-                closeBtn.classList.toggle('show');
-                document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
-            });
+        // Event listener for the menu button
+        menuBtn.addEventListener('click', toggleNav);
 
-            closeBtn.addEventListener('click', function () {
-                navLinks.classList.remove('show');
-                closeBtn.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            });
+        // Event listener for the close button
+        closeBtn.addEventListener('click', function () {
+            navLinks.classList.remove('show');
+            closeBtn.classList.remove('show');
+            document.body.style.overflow = 'auto';
         });
-        
-        document.addEventListener('DOMContentLoaded', function () {
-            const closeBtn = document.querySelector('.close-btn');
-            const navLinks = document.querySelector('.nav-links');
-            const menuBtn = document.querySelector('.menu-btn');
+    });
+    
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const openVideoBtn = document.getElementById('openVideo');
+    const closeVideoBtn = document.getElementById('closeVideo');
+    const videoOverlay = document.getElementById('videoOverlay');
 
-            menuBtn.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-                closeBtn.classList.toggle('show');
-                document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
-            });
+    openVideoBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        videoOverlay.style.display = 'flex';
+    });
 
-            closeBtn.addEventListener('click', function () {
-                navLinks.classList.remove('show');
-                closeBtn.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            });
-        });
-        
-    </script>
+    closeVideoBtn.addEventListener('click', function () {
+        videoOverlay.style.display = 'none';
+        // You can also pause the video here if needed
+    });
+
+    // Close the video overlay if clicked outside the video area
+    videoOverlay.addEventListener('click', function (event) {
+        if (event.target === videoOverlay) {
+            videoOverlay.style.display = 'none';
+            // You can also pause the video here if needed
+        }
+    });
+});
+
+</script>
+
 </body>
 </html>
