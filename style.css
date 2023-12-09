@@ -406,6 +406,8 @@ nav .fa {
 
 
 
+
+
 /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ 
 
 /*----- COURSES WE OFFER -----*/
@@ -716,39 +718,7 @@ h3 {
 }
 
 /* LIBRARY PAGE FUSASIS*/ /* LIBRARY PAGE FUSASIS*/ /* LIBRARY PAGE FUSASIS*//* LIBRARY PAGE FUSASIS*//* LIBRARY PAGE FUSASIS*/
-.li-header{
-    height: 30vh;
-    widows: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpg);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-.sub-header h1{
-    margin-top: 10px;
-}
 
-.lib-us{
-    width: 80%;
-    margin: auto;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-.lib-col{
-    flex-basis: 100%;
-    padding: 30px 2px;
-}
-.lib-col img{
-    width: 100%;
-    border-radius: 15px;
-}
-.lib-col h1{
-    padding-top: 0;
-}
-.lib-col p{
-    padding: 15px 0 25px;
-}
 
 /* PRIVACY POLICY PAGE FUSASIS*/ /* PRIVACY POLICY PAGE FUSASIS*/ /* PRIVACY POLICY PAGE FUSASIS*/ /* PRIVACY POLICY PAGE FUSASIS*/ 
 .policy-header{
@@ -799,8 +769,87 @@ h3 {
     margin-top: 10px;
 }
 
+/*ADMISSION */ /*ADMISSION */ /*ADMISSION *//*ADMISSION *//*ADMISSION *//*ADMISSION *//*ADMISSION *//*ADMISSION *//*ADMISSION *//*ADMISSION */ 
+.admission-header{
+    height: 30vh;
+    widows: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpg);
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.admission-header h1{
+    margin-top: 10px;
+}
+
+.admission-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.admission-col{
+    flex-basis: 100%;
+    padding: 30px 2px;
+}
+.admission-col img{
+    width: 100%;
+    border-radius: 15px;
+}
+.admission-col h1{
+    padding-top: 0;
+}
+.admission-col p{
+    padding: 15px 0 25px;
+}
+
+/* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ 
+.accordion-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion {
+    margin-bottom: 10px;
+}
+
+.accordion-btn {
+    background-color: #04091E;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    
+}
+
+.accordion-content p {
+    margin: 0;
+}.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+.accordion-content.show {
+    display: block;
+}
+/* Media query for small screens */
+@media screen and (max-width: 767px) {
+    .accordion-btn {
+        width: auto;
+    }
+}
 /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ /*LIBRARY*/ 
-.library-header{
+.admission-header{
     height: 30vh;
     widows: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/library.jpg);
@@ -809,7 +858,7 @@ h3 {
     text-align: center;
     color: #fff;
 }
-.library-header h1{
+.admission-header h1{
     margin-top: 10px;
 }
 
@@ -844,7 +893,7 @@ h3 {
 }
 
 
-/* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ /* ACCORDION */ 
+/* ACCORDION ADMISSION */ /* ACCORDION ADMISSION *//* ACCORDION ADMISSION *//* ACCORDION ADMISSION *//* ACCORDION ADMISSION *//* ACCORDION ADMISSION */
 .accordion-container {
     max-width: 800px;
     margin: 20px auto;
@@ -1355,3 +1404,5 @@ h3 {
     }
 }
 /* COOKIES*/
+
+/*LOG IN*/
