@@ -39,21 +39,55 @@
         }
 
         img {
-            max-width: 100%; /* Ensure images don't exceed container width */
-            margin-bottom: 20px; /* Add some spacing between images */
+            max-width: 100%;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
+        }
+
+        /* Add style for the countdown timer */
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
         }
     </style>
     <title>404 - Page Not Found</title>
 </head>
 <body>
     <div class="container">
-        <h1><br>FUSASIS Server is currently undergoing maintenance.</h1>
+        <h1>FUSASIS Server is currently undergoing maintenance.</h1>
         <img src="images/over2.png" alt="Your Second Image">
-        <p>HGBaquiran College, Inc.<br>Please wait a moment and try again.<br> Contact the administrator.</p>
+        <p>HGBaquiran College, Inc.<br>Please wait a moment and try again.<br>Contact the administrator.<br>fusasis@outlook.com</p>
+        
+        <!-- Add an element to display the countdown timer -->
+        <div id="countdown"></div>
     </div>
+    
+    <script>
+        // Set the date we're counting down to (December 30, 2023)
+        var countDownDate = new Date("Dec 30, 2023 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown in the "countdown" element
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
