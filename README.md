@@ -1,8 +1,8 @@
 # hgbc.edu.ph
 # Temporary Webpage Project Platform Tech
 
-Welcome to my Platform Technology final project repository! This houses the code for my temporary webpage of HGBaquiran College, Inc. It features responsive design, interactive elements, and a clean codebase (charot). FUSASISERVER
-
+Welcome to my Platform Technology final project repository! This houses the code for my temporary webpage of HGBaquiran College, Inc. It features a responsive design, interactive elements, and a clean codebase (charot). FUSASISERVER
+Also, read our FUSASIS - The Code of Conduct.md
 **Tech Stack:**
 - HTML
 - CSS
@@ -13,7 +13,7 @@ Welcome to my Platform Technology final project repository! This houses the code
 2. Open `index.html` in your browser.
 
 **Contribute:**
-Feel free to fork and submit pull requests.
+Please feel free to make sure to turn in pull requests.
 
 **Feedback:**
 Open issues for bugs or suggestions.
