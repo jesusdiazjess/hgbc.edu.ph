@@ -83,7 +83,7 @@
       }
 
       .txt_field input {
-        width: 100%;
+        width: calc(100% - 24px); /* Adjusted width to accommodate the icon */
         padding: 20px 0;
         border: none;
         border-bottom: 1px solid #999;
@@ -175,6 +175,22 @@
         text-decoration: none; /* Remove underline */
         margin-left: 10px; /* Add margin between links */
       }
+
+      /* Slanted line */
+      .eye-line {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 10px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(-50%) rotate(-45deg);
+        transition: width 0.3s;
+      }
+
+      .show-password .eye-line {
+        width: 0;
+      }
     </style>
 </head>
 
@@ -191,10 +207,12 @@
           <span></span>
           <label>Username</label>
         </div>
-        <div class="txt_field">
-          <input type="password" required>
+        <div class="txt_field" style="position: relative;">
+          <input type="password" id="passwordField" required>
           <span></span>
           <label>Password</label>
+          <i class="far fa-eye" id="togglePassword" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+          <div class="eye-line"></div>
         </div>
         <div class="pass">Forgot Password?</div>
         <input type="submit" value="Login">
@@ -229,6 +247,22 @@
       document.getElementById('login-form').addEventListener('submit', function() {
         // Show loading spinner when form is submitted
         document.getElementById('loading').style.display = 'block';
+      });
+
+      // Toggle password visibility
+      document.getElementById('togglePassword').addEventListener('click', function() {
+        const passwordField = document.getElementById('passwordField');
+        const eyeIcon = document.getElementById('togglePassword');
+        const eyeLine = document.querySelector('.eye-line');
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          eyeIcon.classList.add('show-password');
+          eyeLine.style.width = '0';
+        } else {
+          passwordField.type = "password";
+          eyeIcon.classList.remove('show-password');
+          eyeLine.style.width = '10px';
+        }
       });
     </script>
   </body>
