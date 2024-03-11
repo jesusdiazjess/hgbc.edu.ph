@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HGBaquiran College - Official Website</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>HGBaquiran College - Official Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     
-    <!-- Add the following lines for the favicon -->
+<!-- Add the following lines for the favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     
@@ -16,118 +19,237 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Ubuntu', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Center content horizontally and vertically */
-        }
-
-        h1 {
-            color: #e44d26;
-            font-size: 2em;
-            margin-bottom: 20px;
-            animation: slideInDown 1s ease-in-out;
-        }
-
-        img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            animation: zoomIn 1s ease-in-out;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            animation: slideInUp 1s ease-in-out;
-        }
-
-        /* Add style for the countdown timer */
-        #countdown {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideInDown {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes zoomIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes slideInUp {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+    
+    
 </head>
 <body>
-    <div class="container">
-        <h1>FUSASIS Server is currently<br>undergoing maintenance.</h1>
-        <img src="images/over2.png" alt="Server Maintenance Image">
-        <p>HGBaquiran College, Inc.<br>Presently undergoing scheduled maintenance<br>to ensure optimal performance and reliability.<br><br>Contact the administrator at <a href="mailto:fusasis@outlook.com">fusasis@outlook.com</a>.</p>
+    <section class="header">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="images/logo.png" alt="HGBaquiran College Logo"></a>
+                <div>
+                    <span class="logo-text">HGBaquiran College</span>
+                </div>
+            </div>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <span class="close-btn" onclick="hideMenu()">&times;</span>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="course.html">COURSE</a></li>
+                        <li><a href="admission.html">ADMISSION</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                    </ul>
+                </div>
+                <span class="menu-btn" onclick="showMenu()">&#9776;</span>
+                <div class="login-container">
+                    <div class="login-wrapper">
+                        <a href="login.html" class="login-link">LOG IN</a>
+                    </div>
+                        
+                </div>
+            </div>
+        </nav>
         
-        <!-- Add an element to display the countdown timer -->
-        <div id="countdown"></div>
-    </div>
+        <div class="text-box">
+    <h1>Welcome to HGBaquiran College</h1>
+    <h1>The road to success is paved with good intentions.</h1>
     
-    <script>
-        // Set the date we're counting down to (December 30, 2023)
-        var countDownDate = new Date("Feb 24, 2024 00:00:00").getTime();
+    <!-- VIDEO PLAYER LEARN MORE, FUSASIS -->
+<a href="#" id="openVideo" class="hero-btn">
+    <div class="btn-container">Learn More</div>
+</a>
 
-        // Update the countdown every 1 second
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
+<div id="videoOverlay" class="overlay">
+    <div class="video-container">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HNR4RlT4z-8?rel=0"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        <div id="closeVideo" class="close-btn">Close</div>
+    </div>
+</div>
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the countdown in the "countdown" element
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+</div>
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "FUSASIS";
-            }
-        }, 1000);
-    </script>
+        </section>
+        
+        <!-- ADD THE NOTICE/BANNER ELEMENT -->    
+        
+    
+    <!-- COURSE SECTION -->
+    <section class="course">
+    <h1>Courses We Offer</h1>
+    <p>Discover your dream and passion, where we offer a diverse range of bachelor's programs tailored to your aspirations. Your journey to success starts here.</p>
+    <div class="course-box">
+        <div class="row">
+            <div class="course-col">
+                <img src="dept logo/B.E.webp" alt="E.D Logo">
+                <h3>Elementary Education</h3>
+            </div>
+            
+            <div class="course-col">
+                <img src="dept logo/B.A.png" alt="B.A Logo">
+                <h3>Business Administration</h3>
+            </div>
+            
+            <div class="course-col">
+                <img src="dept logo/BCRIM.png" alt="BCRIM Logo">
+                <h3>College of Criminology</h3>
+            </div>
+            
+            <div class="course-col">
+                <img src="dept logo/B.E2.webp" alt="S.E Logo">
+                <h3>Secondary Education</h3>
+            </div>
+            
+             <div class="course-col">
+                <img src="dept logo/H.M.png" alt="H.M Logo">
+                <h3>Hospitality Management</h3>
+            </div>
+            
+            <div class="course-col">
+                <img src="dept logo/I.T.png" alt="I.T Logo">
+                <h3>Information Technology</h3>
+            </div>
+            <!-- Repeat the pattern for other course-col elements with respective logos -->
+        </div>
+    </div>
+</section>
+    
+    <!-- PHILOSOPHY, VISION AND MISSION -->
+    <section class="pvm">
+        <h1>Our Philosophy, Vision and Mission</h1>
+        <p>HGBaquiran College, inspired by Tryon Edwards, focuses on disciplined education. It envisions well-rounded graduates for global competitiveness and active contributions. The mission is to provide quality education, shaping individuals with the skills and values for a changing world and nation-building.</p>
+        
+        <div class="row">
+            <div class="pvm-col">
+                <img src="images/gradiev1.jpg">
+                <div class="layer">
+                    <h3>HGBaquiran College adopts its philosophy from that of Thyron Edward, American Theologian, which states thus; “The great end of education is, to discipline rather than to furnish the mind; to train it to the use of its own powers, rather than fill it with accumulation of others”</h3>
+                    
+                </div>
+            </div>
+            
+             <div class="pvm-col">
+                <img src="images/gradiev22.jpg">
+                <div class="layer">
+                    <h3>A well rounded human being. Equipped with the values, attitudes and skills that will enable him/her to be locally and globally competitive, live a productive life, contribute to nation building, and meet creatively and resourcefully the social and moral challenges of the world.</h3> 
+                </div>
+            </div>
+            
+             <div class="pvm-col">
+                <img src="images/gradiev3.jpg">
+                <div class="layer">
+                    <h3>HGBaquiran College commits itself to offer quality education that would develop a well rounded human being who possesses desirable values, attitudes and skills thereby enabling him/her to be locally competitive, live a productive life, cope with the social and moral challenges of the modern world and be able to contribute to nation building.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pvm">
+        <h1>Dedication, Deligence, Determination, Devotion and Discipline.</h1>
+    </section>
+    
+    <!-- ENROLLMENT FUSASIS -->
+    <section class="enroll">
+    <h1>ENROLLMENT ONGOING FOR<br>2ND SEMESTER S.Y 2023-24</h1>
+    <a href="https://forms.office.com/r/7qwZuncbRe" class="hero-btn">ENROLL TODAY</a>
+</section>
+
+    
+    
+    
+    
+    
+   <!-- FOOTER FUSASIS -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <div class="footer-text">HGBaquiran College, Inc., is located in Tumauini, Isabela, Philippines 3325.<br>It was established in 2005 and was the town of Tumauini's only college.<br>© 2024 All Rights Reserved.</div>
+
+        <!-- Updated href attribute for the privacy policy link -->
+        <p><a href="privacy policy.html" class="privacy-policy-link">PRIVACY POLICY</a></p>
+
+        <div class="icons">
+    <a href="https://www.facebook.com/hgbaquiran" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    
+    <a href="mailto:hgbcregistrar2011@yahoo.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    
+    <a href="https://www.youtube.com/your-youtube-channel" target="_blank">
+        <i class="fa-brands fa-youtube"alt=""height="30"></i>
+    </a>
+    
+</div>
+
+        <p class="made">Made with ❤️ by <a href="fusasis.html" target="FUSASIS">FUSASIS</a></p>
+
+    </section>
+    <!-- ... FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS FUSASIS ...-->
+    
+ 
+    
+    <!-- ... JavaScript for Toggle Menu (please repair) FUSASIS ... -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the necessary elements
+        const closeBtn = document.querySelector('.close-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const menuBtn = document.querySelector('.menu-btn');
+
+        // Function to toggle the navigation menu
+        function toggleNav() {
+            navLinks.classList.toggle('show');
+            closeBtn.classList.toggle('show');
+            document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : 'auto';
+        }
+
+        // Event listener for the menu button
+        menuBtn.addEventListener('click', toggleNav);
+
+        // Event listener for the close button
+        closeBtn.addEventListener('click', function () {
+            navLinks.classList.remove('show');
+            closeBtn.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const openVideoBtn = document.getElementById('openVideo');
+    const closeVideoBtn = document.getElementById('closeVideo');
+    const videoOverlay = document.getElementById('videoOverlay');
+
+    openVideoBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+        videoOverlay.style.display = 'flex';
+    });
+
+    closeVideoBtn.addEventListener('click', function () {
+        videoOverlay.style.display = 'none';
+        // You can also pause the video here if needed
+    });
+
+    // Close the video overlay if clicked outside the video area
+    videoOverlay.addEventListener('click', function (event) {
+        if (event.target === videoOverlay) {
+            videoOverlay.style.display = 'none';
+            // You can also pause the video here if needed
+        }
+    });
+});
+
+</script>
+
 </body>
 </html>
