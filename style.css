@@ -377,16 +377,6 @@ nav .fa {
     display: block;
 }
 
-.notice {
-    position: fixed;
-    top: 0;
-    right: 100%; /* Initially off-screen */
-    background-color: #FF0000; /* Red color, you can change it */
-    color: #FFFFFF; /* White text, you can change it */
-    padding: 3px;
-    animation: slideIn 3s ease-in-out forwards; /* Animation duration and timing function */
-}
-
 @keyframes slideIn {
     to {
         right: 0; /* Move to the right edge of the screen */
@@ -403,11 +393,6 @@ nav .fa {
 /* Your existing styles here... */
 
 /* NOTICE BANNER... */ /* NOTICE BANNER... */ /* NOTICE BANNER... */ /* NOTICE BANNER... */ /* NOTICE BANNER... */ /* NOTICE BANNER... */ 
-
-
-
-
-
 
 
 /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ /* FUSASIS ends here... */ 
@@ -802,6 +787,20 @@ h3 {
     color: #fff;
 }
 .elem-header h1{
+    margin-top: 10px;
+}
+
+/*BUSINESS ADMINISTRATION PAGE*//*BUSINESS ADMINISTRATION PAGE*//*BUSINESS ADMINISTRATION PAGE*//*BUSINESS ADMINISTRATION PAGE*/
+.bussad-header{
+    height: 30vh;
+    widows: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/news.jpg);
+    background-position:center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.bussad-header h1{
     margin-top: 10px;
 }
 
