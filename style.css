@@ -88,6 +88,8 @@ nav img {
 }
 
 .login-wrapper {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
     position: relative;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -515,7 +517,17 @@ h3 {
 }
 
 
-/* PHILOSOPHY, VISION AND MISSION FUSASIS */ /* PHILOSOPHY, VISION AND MISSION FUSASIS */ /* PHILOSOPHY, VISION AND MISSION FUSASIS */ 
+/* PHILOSOPHY, VISION AND MISSION FUSASIS */ /* PHILOSOPHY, VISION AND MISSION FUSASIS */ /* PHILOSOPHY, VISION AND MISSION FUSASIS */
+/* Default text color */
+.pvm {
+    color: black;
+}
+
+/* Dark mode text color */
+.dark-mode .pvm {
+    color: white;
+}
+
 .pvm {
     width: 80%;
     margin: auto;
@@ -579,6 +591,18 @@ h3 {
     .pvm-col {
         flex: 0 0 100%;
     }
+}
+
+/* New CSS for responsive design */
+@media only screen and (max-width: 600px) {
+  footer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  footer div {
+    margin-bottom: 10px; /* Add margin between footer links */
+  }
 }
 
 /* ENROLLMENT FUSASIS*/ /* ENROLLMENT FUSASIS*/ /* ENROLLMENT FUSASIS*/ /* ENROLLMENT FUSASIS*/ /* ENROLLMENT FUSASIS*/ /* ENROLLMENT FUSASIS*/ 
@@ -862,6 +886,38 @@ h3 {
         width: auto;
     }
 }
+
+/* Add this CSS to your existing stylesheet */
+
+/* Style for the accordion button */
+.accordion-btn {
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the accordion content container */
+.accordion-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Show the accordion content when it's open */
+.accordion-content.show {
+    display: block;
+}
+
 /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ /*ADMISSION*/ 
 .admission-header{
     height: 30vh;
@@ -1047,7 +1103,7 @@ h3 {
 .course-header {
     height: 30vh;
     width: 100%;
-    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/blufad.jpg);
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), #00008b;
     background-position: top;
     background-size: cover;
     text-align: center;
@@ -1417,6 +1473,29 @@ h3 {
         right: 20px;
     }
 }
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1e1e; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+/* Styles for the header */
+.header {
+    background-color: transparent; /* Remove any background color */
+    border-bottom: none; /* Remove any border */
+}
+
+/* Footer styles */
+.footer {
+    /* Add any styles you need for the footer */
+}
+
+
+
+
+
+
 /* COOKIES*/
+
 
 /*LOG IN*/
