@@ -40,7 +40,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     
-     <style>
+     <!--<style>
         /* Loading spinner styles */
         .loader-overlay {
             display: flex;
@@ -68,14 +68,17 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-    </style>
+    </style>-->
     
 </head>
 <body>
+    
+    <!-- ADD THE NOTICE/BANNER ELEMENT -->
+
     <!-- Loading spinner overlay -->
-    <div class="loader-overlay" id="loaderOverlay">
+    <!--<div class="loader-overlay" id="loaderOverlay">
         <div class="loader"></div>
-    </div>
+    </div>-->
     <section class="header">
         <nav>
             <div class="logo-container">
@@ -132,9 +135,6 @@
 
         </section>
         
-        <!-- ADD THE NOTICE/BANNER ELEMENT -->    
-        
-    
     <!-- COURSE SECTION -->
     <section class="course">
     <h1>Courses We Offer</h1>
@@ -302,10 +302,11 @@
     });
 });
     // JavaScript to hide loader after page load
-        window.addEventListener('load', function () {
-            const loaderOverlay = document.getElementById('loaderOverlay');
-            loaderOverlay.style.display = 'none';
-        });
+        //window.addEventListener('load', function () {
+            //const loaderOverlay = document.getElementById('loaderOverlay');
+            //loaderOverlay.style.display = 'none';
+        //});
+
 </script>
 </body>
 </html>
