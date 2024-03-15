@@ -645,10 +645,10 @@ h3 {
         background-image: url(images/enbr1.jpg);
     }
     25.1%, 50% {
-        background-image: url(images/enbr2.jpg);
+        background-image: url(images/enbr6.webp);
     }
     50.1%, 75% {
-        background-image: url(images/enbr3.jpg);
+        background-image: url(images/enbr5.webp);
     }
     75.1%, 100% {
         background-image: url(images/enbr4.jpg);
@@ -691,15 +691,13 @@ h3 {
 .footer h4{
     margin-bottom: 1px;
     margin-top: 1px;
-    font-weight: 600;
-    
+    font-weight: 600;    
 }
-.icons .fa{
-    color: #f44336;
-    margin: 0 12px;
-    cursor: pointer;
-    padding: 18px 0;
+
+.icon {
+    font-size: 30px; /* Adjust the size as needed */
 }
+
 .fa-heart{
     color: #f44336;
 }
