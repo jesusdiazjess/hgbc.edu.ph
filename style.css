@@ -832,7 +832,7 @@ h3 {
 .elem-header{
     height: 30vh;
     widows: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/news.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/ELEMHEAD.jpg');
     background-position:center;
     background-size: cover;
     text-align: center;
@@ -846,7 +846,7 @@ h3 {
 .bussad-header{
     height: 30vh;
     widows: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/news.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/BUSSADHEAD.jpg');
     background-position:center;
     background-size: cover;
     text-align: center;
