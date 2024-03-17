@@ -1,8 +1,11 @@
 # hgbc.edu.ph = waiting list DNS
-# Temporary Webpage Project - Integrative Programming + Technologies _(formerly Platform Technology)_
+# Welcome to the Integrative Programming + Technologies Finals Project Repository
 
-Welcome to my Integrative Programming + Technologies _(formerly Platform Technology_) finals project repository! This houses the code for temporary (FRONT-END) webpage of HGBaquiran College, Inc. It features a responsive design, interactive elements, and a minified codebase. 
-Also, read our [FUSASIS - The Code of Conduct.md](https://github.com/jesusdiazjess/hgbc.edu.ph?tab=coc-ov-file)
+## About
+
+Welcome to the repository for the temporary (FRONT-END) webpage of HGBaquiran College, Inc., created as part of the Integrative Programming + Technologies _(formerly Platform Technology)_ finals project. This project showcases a responsive design, interactive elements, and a minified codebase for optimized performance.
+
+To learn more about our code of conduct, please refer to [FUSASIS - The Code of Conduct.md](https://github.com/jesusdiazjess/hgbc.edu.ph?tab=coc-ov-file)
 
 **Tech Stack:**
 - HTML
@@ -10,11 +13,10 @@ Also, read our [FUSASIS - The Code of Conduct.md](https://github.com/jesusdiazje
 - JavaScript
 
 **Contribute:**
-Please feel free to make sure to turn in pull requests.
+We welcome contributions from the community. Feel free to submit pull requests to improve the project.
 
 **Feedback:**
-Open issues for bugs or suggestions.
+If you encounter any bugs or have suggestions for improvement, please open an issue.
 
-Explore my journey in Integrative Programming + Technologies _(formerly Platform Technology)_ through this project!
-
-Please note that all code in this repository is minified for optimized performance and enhanced security measures.
+**About Security:**
+Please note that all code in this repository is minified to ensure optimized performance and enhanced security measures.
