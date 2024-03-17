@@ -1,21 +1,16 @@
 # Security Policy
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+At FUSASIS, we take security seriously. We appreciate your efforts to responsibly disclose any potential vulnerabilities you may find in our project.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+To report a security vulnerability, please email us directly at fusasis@outlook.com. We ask that you refrain from publicly disclosing the issue until we have had an opportunity to review and address it.
+
+When reporting a vulnerability, please provide us with:
+* A detailed description of the vulnerability.
+* Steps to reproduce the vulnerability.
+* Any additional information that could help us understand and mitigate the issue.
+
+We will acknowledge receipt of your report within 2 to 4 business days and will work diligently to investigate and resolve the issue in a timely manner. We are committed to maintaining the security of our project and appreciate your assistance in helping us achieve this goal.
+
+Thank you for helping to keep FUSASIS safe and secure.
