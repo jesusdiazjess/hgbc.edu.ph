@@ -1,4 +1,3 @@
-# hgbc.edu.ph = waiting list DNS
 # Welcome to the Integrative Programming + Technologies Finals Project Repository
 
 ## About
@@ -20,3 +19,5 @@ If you encounter any bugs or have suggestions for improvement, please open an is
 
 **About Security:**
 Please note that all code in this repository is minified to ensure optimized performance and enhanced security measures.
+
+# hgbc.edu.ph = waiting list DNS
