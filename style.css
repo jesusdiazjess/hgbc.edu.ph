@@ -667,6 +667,61 @@ h3 {
     }
 }
 
+/* New styles for the small circles */
+.circle {
+    position: absolute;
+    background-color: #007BFF; /* Fill color of the circles */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: moveCircle 10s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Keyframes for the circle animation */
+@keyframes moveCircle {
+    0% {
+        left: 20%; /* Initial position */
+        opacity: 0; /* Initially invisible */
+    }
+    20% {
+        opacity: 1; /* Make circles visible when background image starts to change */
+    }
+    25%, 50% {
+        left: 50%; /* Move the circles to the center */
+    }
+    75% {
+        opacity: 0; /* Make circles invisible before next image transition */
+    }
+    100% {
+        left: 80%; /* Final position */
+        opacity: 0; /* Make circles invisible */
+    }
+}
+
+/* Place the circles under the "ENROLL TODAY" button */
+.circle1, .circle2, .circle3, .circle4 {
+    bottom: 30px; /* Adjust the distance from the bottom as needed */
+}
+
+.circle1 {
+    left: 20%; /* Adjust the position of the first circle */
+}
+
+.circle2 {
+    left: 35%; /* Adjust the position of the second circle */
+}
+
+.circle3 {
+    left: 50%; /* Adjust the position of the third circle */
+}
+
+.circle4 {
+    left: 65%; /* Adjust the position of the fourth circle */
+}
+
+
+
+
 /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ /* FOOTER FUSASIS*/ 
 .footer{
     width: 100%;
@@ -712,6 +767,7 @@ h3 {
 .about-col{
     flex-basis: 100%;
     padding: 30px 2px;
+    text-align: justify;
 }
 .about-col img{
     width: 100%;
@@ -750,6 +806,7 @@ h3 {
 .policy-col{
     flex-basis: 100%;
     padding: 30px 2px;
+    text-align: justify;
 }
 .apolicy-col img{
     width: 100%;
@@ -785,6 +842,7 @@ h3 {
 .terms-col{
     flex-basis: 100%;
     padding: 30px 2px;
+    text-align: justify;
 }
 .terms-col img{
     width: 100%;
@@ -969,6 +1027,7 @@ h3 {
 .admission-col{
     flex-basis: 100%;
     padding: 30px 2px;
+    text-align: justify;
 }
 .admission-col img{
     width: 100%;
@@ -1167,7 +1226,7 @@ h3 {
     padding-bottom: 0px;
 }
 .fusasis-col {
-    text-align: center;
+    text-align: justify
 }
 
 .developer {
