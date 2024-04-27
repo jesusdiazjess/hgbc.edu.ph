@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWA Calculator</title>
+    <link rel="stylesheet" href="CstyleC.css">
+</head>
+<body>
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <h2>Welcome to HGBaquiran College Inc GWA Calculator</h2>
+            <p>This calculator is designed for the academic grade system of HGBaquiran College Inc.<br>Please proceed with your calculations.</p>
+            <button onclick="closeDialog()">Accept</button>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>GWA Calculator</h2>
+        <div id="subjects">
+            <!-- Subjects will be dynamically added here -->
+        </div>
+        <button onclick="addSubject()">Add Subject</button>
+        <button onclick="calculateGWA()">Calculate</button>
+        <button onclick="clearAll()">Reset</button>
+        <p id="result"></p>
+    </div>
+    <script src="CscriptC.js"></script>
+</body>
+</html>
