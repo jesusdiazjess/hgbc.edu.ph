@@ -1,0 +1,102 @@
+.calculator {
+    width: 500px;
+    margin: 70px auto;
+    padding: 50px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); /* Linear gradient background */
+}
+
+#subjects {
+    margin-bottom: 20px;
+}
+
+.subject {
+    margin-bottom: 5px;
+    
+}
+
+
+input[type="number"] {
+    width: 90px;
+    height: 20px;
+}
+
+/* Styles for dialog box */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.dialog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+    
+    
+    
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.dialog.show {
+    display: block;
+    opacity: 100;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 70%;
+    }
+
+    .dialog-content {
+        width: 70%;
+    }
+}
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Reset width for all buttons */
+}
+
+/* Add Subject button */
+#subjects button {
+    background-color: blue;
+    color: white;
+}
+
+/* Calculate button */
+.calculator button:nth-child(3) {
+    background-color: green;
+    color: white;
+}
+
+/* Clear All button */
+.calculator button:nth-child(4) {
+    background-color: red;
+    color: white;
+}
+
+/* Remove button */
+.subject button {
+    padding: 5px 10px; /* Adjust padding to make it smaller */
+    font-size: 12px; /* Optionally adjust font size to fit smaller button */
+}
