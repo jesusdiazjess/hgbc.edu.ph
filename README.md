@@ -1,4 +1,4 @@
-# Welcome to the Integrative Programming + Technologies Finals Project Repository
+# Development Repository for HGBaquiran College, Inc. Webpage: A Full-Stack Academic Project
 
 ## About
 
