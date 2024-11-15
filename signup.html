@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account :: HGBaquiran College</title>
+
+    <!-- Water.css for styling -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">-->
+
+    <!-- Favicon -->
+    <link rel="icon" href="imaHEN/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imaHEN/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="signup.css">
+
+
+    <style>
+    .error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+    }
+
+    .loading-spinner {
+        display: none; /* Hide by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin: -25px 0 0 -25px;
+        border: 6px solid #ddd;
+        border-top-color: #3498db;
+        border-radius: 50%;
+        animation: spin 1s ease infinite;
+        z-index: 9999; /* Ensure it appears on top */
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+
+
+
+
+    /* Strength bar container */
+.strength-bar-container {
+    display: flex;             
+    justify-content: flex-end; 
+    margin-top: 5px;          
+    width: 100%;               
+    box-sizing: border-box;    
+}
+
+/* Password strength bar */
+.password-strength-bar {
+    width: 100%;                
+    height: 7px;
+    transition: background-color 0.3s;
+    display: none;           
+}
+
+.password-strength-weak { background-color: red; }
+.password-strength-medium { background-color: yellow; }
+.password-strength-strong { background-color: green; }
+
+.eye-icon {
+        position: absolute;
+        right: 10px;
+        top: 25%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: black; /* Sets the color of the icon to black */
+    }
+    .eye-icon i {
+        font-size: 20px; /* Adjust size if necessary */
+    }
+
+    .label {
+        display: block; /* Ensure the label is on a new line */
+        margin-top: 5px; /* Add spacing between input and label */
+    }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="center">
+        
+    <form action="prosignup.php" method="post" id="signupForm" novalidate>
+
+        <div class="login-header">
+            <img src="imaHEN/logo/logo.webp" alt="Logo" class="login-logo">
+            
+            <h1>Create Account</h1>
+        </div>
+
+
+
+        <div class="txt_field">
+            <input type="text" id="name" name="name" required placeholder="">
+            <div class="error" id="nameError"></div>
+            <label for="name">Name</label>
+        </div>
+    
+        <div class="txt_field">
+            
+            <input type="email" id="email" name="email" required placeholder=""> 
+            <div class="error" id="emailError"></div>
+            <label for="email">Email</label>
+        </div>
+    
+        <div class="txt_field">
+            <span class="eye-icon" id="eyeIcon" onclick="togglePasswordVisibility()" style="display: none;">
+                <i id="toggleIcon" class="fa fa-eye"></i>
+            </span>
+            <input type="password" id="password" name="password" required placeholder="" oninput="checkPasswordStrength(); showEyeIcon();">
+            <div class="error" id="passwordError"></div>
+            <label for="password">Password</label>
+            <span style="font-size: 0.8em; color:black; font-style: italic;">(Must be at least 8 characters long, include at least one number & special character.)</span>
+            
+            <!-- Password strength bar -->
+            <div id="passwordStrength" class="password-strength-bar"></div>
+        
+            <div class="strength-bar-container">
+                <div class="password-strength-bar"></div>
+            </div>
+        </div>
+        
+        <script>
+        function showEyeIcon() {
+            const passwordInput = document.getElementById("password");
+            const eyeIcon = document.getElementById("eyeIcon");
+            if (passwordInput.value.length > 0) {
+                eyeIcon.style.display = "inline";
+            } else {
+                eyeIcon.style.display = "none";
+            }
+        }
+        
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const toggleIcon = document.getElementById("toggleIcon");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+        </script>
+        
+    
+        <div class="txt_field">
+            
+            <input type="password" id="password_confirmation" name="password_confirmation" required placeholder="">
+            <div class="error" id="passwordConfirmationError"></div>
+            <label for="password_confirmation">Repeat Password</label>
+        </div>
+    
+        <!--<button type="submit">Sign Up</button>-->
+
+        <input type="submit" value="Sign Up">
+
+
+
+        <script>
+          function togglePasswordVisibility() {
+              const passwordInput = document.getElementById("password");
+              const toggleIcon = document.getElementById("toggleIcon");
+              if (passwordInput.type === "password") {
+                  passwordInput.type = "text";
+                  toggleIcon.classList.replace("fa-eye", "fa-eye-slash");
+              } else {
+                  passwordInput.type = "password";
+                  toggleIcon.classList.replace("fa-eye-slash", "fa-eye");
+              }
+          }
+      
+          function checkPasswordStrength() {
+    const password = document.getElementById("password").value;
+    const strengthBar = document.getElementById("passwordStrength");
+
+    // Show the strength bar only when the user starts typing
+    strengthBar.style.display = password.length > 0 ? "block" : "none";
+
+    // Define criteria for weak, medium, and strong
+    const isLongEnough = password.length >= 8;
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    // Remove existing strength classes
+    strengthBar.classList.remove("password-strength-weak", "password-strength-medium", "password-strength-strong");
+
+    if (isLongEnough && hasNumber && hasSpecialChar) {
+        // Strong
+        strengthBar.classList.add("password-strength-strong");
+    } else if (isLongEnough && (hasNumber || hasSpecialChar)) {
+        // Medium
+        strengthBar.classList.add("password-strength-medium");
+    } else {
+        // Weak
+        strengthBar.classList.add("password-strength-weak");
+    }
+}
+
+
+
+
+const passwordInput = document.getElementById('passwordInput');
+const strengthBar = document.getElementById('passwordStrengthBar');
+
+passwordInput.addEventListener('input', function() {
+    const password = passwordInput.value;
+    let strength = '';
+
+    // Simple password strength checking logic
+    if (password.length < 6) {
+        strength = 'weak';
+    } else if (password.length < 10) {
+        strength = 'medium';
+    } else {
+        strength = 'strong';
+    }
+
+    // Update the strength bar's class and display it
+    strengthBar.classList.remove('password-strength-weak', 'password-strength-medium', 'password-strength-strong');
+    strengthBar.style.display = 'block'; // Show the strength bar
+
+    switch (strength) {
+        case 'weak':
+            strengthBar.classList.add('password-strength-weak');
+            break;
+        case 'medium':
+            strengthBar.classList.add('password-strength-medium');
+            break;
+        case 'strong':
+            strengthBar.classList.add('password-strength-strong');
+            break;
+    }
+});
+
+
+
+          
+      </script>
+
+
+
+
+
+        <!-- Loading spinner element -->
+<div id="loadingSpinner" class="loading-spinner"></div>
+
+<h3>
+    Already have an account?
+    <a href="login.html" id="loginLink" style="text-decoration: underline;">Log In</a>
+</h3>
+
+<script>
+    // Hide the spinner on page load and clear the session storage flag if present
+    window.addEventListener("load", function() {
+        document.getElementById("loadingSpinner").style.display = "none";
+        sessionStorage.removeItem("loading");
+    });
+
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Stop the default link action
+
+        // Show the loading spinner
+        document.getElementById("loadingSpinner").style.display = "block";
+
+        // Set a flag in session storage to indicate loading
+        sessionStorage.setItem("loading", "true");
+
+        // Delay for 1.5 seconds before navigating
+        setTimeout(function() {
+            window.location.href = "login.html"; // Navigate to the login page
+        }, 1500);
+    });
+
+    // If loading is still in session storage, remove it and hide the spinner
+    if (sessionStorage.getItem("loading")) {
+        document.getElementById("loadingSpinner").style.display = "none";
+    }
+</script>
+
+
+        
+    </form>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div>&copy; <span id="year"></span> HGBaquiran College, Inc.</div>
+    <script>
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Set the year in the HTML
+    document.getElementById('year').textContent = currentYear;
+    </script>
+
+    <div class="footer-links">
+      <a href="termsofuse.html">Terms of Use</a>
+      <a href="privacypolicy.html">Privacy Policy</a>
+    </div>
+
+    <style>
+      footer {
+        background-color: #333; /* Set background to #333 */
+        color: #fff; /* Set text color to white */
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        text-align: center;
+      }
+    
+      footer div {
+        color: #fff; /* Ensure the text remains white */
+      }
+    
+      .footer-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff; /* Set link color to white */
+        display: inline-block;
+      }
+    
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+    
+      /* Responsive for smaller screens */
+      @media (max-width: 768px) {
+        footer {
+          flex-direction: column;
+        }
+        .footer-links {
+          margin-top: 10px;
+          text-align: center; /* Center the links */
+        }
+        .footer-links a {
+          display: inline-block; /* Keep the links side by side */
+          margin: 0 5px;
+        }
+      }
+    </style> 
+
+  </footer>
+  
+  <!-- FOOTER -->
+
+    <!-- JustValidate JS Library -->
+    <!--<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>-->
+    <script src="validation.js" defer></script>
+
+    <!--Custom validation script -->
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            const password = document.getElementById('password').value;
+            const passwordConfirmation = document.getElementById('password_confirmation').value;
+
+            //if (password !== passwordConfirmation) {
+                //e.preventDefault();  // Prevent the form from submitting
+                //alert('Passwords do not match! Please try again.');
+            //}
+        });
+    </script>
+
+    <!-- Information Assurance + Security v1 by FUSASIS -->
+  <script>
+    // Disable right-click context menu for the whole page
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();  // Disable right-click menu for the entire page
+    });
+
+    // Prevent developer tools keyboard shortcuts (e.g., F12, Ctrl + Shift + I, Ctrl + U)
+    document.onkeydown = function(e) {
+        // Block F12, Ctrl + Shift + I, Ctrl + U, and other developer tools key combinations
+        if (e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && e.keyCode == 73) || // Ctrl + Shift + I
+            (e.ctrlKey && e.keyCode == 85)) { // Ctrl + U (view page source)
+            
+            e.preventDefault();  // Prevent the default action for the keys
+            alert("Inspect Element and View Page Source are disabled on this page.");
+        }
+    };
+</script>
+</body>
+<script src="signup.js"></script>
+</html>
