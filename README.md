@@ -16,9 +16,9 @@ To learn more about our code of conduct, please refer to [FUSASIS - The Code of 
 We welcome contributions from the community. Feel free to submit pull requests to improve the project.
 
 **Feedback:**
-If you happen to encounter any bugs or have suggestions for improvement, please open an issue.
+If you encounter any bugs or have suggestions for improvement, please open an issue.
 
 **About Security:**
-Just so you know, all code in this repository is modified to ensure optimized performance and enhanced security measures.
+All code in this repository is modified to ensure optimized performance and enhanced security measures.
 
 # hgbci.net = waiting list DNS
