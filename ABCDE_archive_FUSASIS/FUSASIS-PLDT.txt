@@ -1,0 +1,114 @@
+https://192.168.1.1/admin.html
+DEFAULT LOG-IN CREDENTIALS
+Account: adminpldt
+Password: AC2DIU7QW3ERTY6UPAS4DFG
+
+
+https://192.168.1.1/admin.html
+AFTER LOG-IN CREDENTIALS
+Account: adminpldt
+Password: FUS@SiS/PLDT-2407JESUSDIAZ
+
+LAN PORT FUNCTIONALS
+LAN1(best), LAN2(better), LAN3(best) 
+LAN4 (not working)
+
+****************************
+SSID Configuration Details [SSID Enabled Broadcast]
+FUSASIS 2.4GHz (24devices only)
+Authentication Mode: WPA2 PreSharedKey
+Encryption Mode: AES
+WPA PreSharedKey: FUS@SiSWIFIJesusDiaz5GHz
+WPS Mode: PBC
+
+*************************
+SSID Configuration Details [SSID Enabled Broadcast]
+FUSASIS 5GHz (5devices only)
+Authentication Mode: WPA2 PreSharedKey
+Encryption Mode: AES
+WPA PreSharedKey: FUS@SiSWIFIJesusDiaz5GHz
+
+
+To connect, the FUSASIS must tunred off then connect
+it to primary router via RJ45cable in primary router
+before turn it on.
+
+Change Broadcast ID
+
+Right now, i can't access the main portal.
+FUS@SiSWIFIJesusDiaz5GHz
+
+****************************************
+
+
+---
+
+**Network Configuration Summary**
+
+**1. Router Access Portal:**
+**URL:** [https://192.168.1.1/admin.html](https://192.168.1.1/admin.html)
+
+---
+
+**2. Default Login Credentials:**
+
+* **Username:** `adminpldt`
+* **Password:** `AC2DIU7QW3ERTY6UPAS4DFG`
+
+---
+
+**3. Updated Login Credentials (After Configuration):**
+
+* **Username:** `adminpldt`
+* **Password:** `FUS@SiS/PLDT-2407JESUSDIAZ`
+
+---
+
+**4. LAN Port Functionality:**
+
+* **LAN1:** Best performance
+* **LAN2:** Good performance
+* **LAN3:** Best performance
+* **LAN4:** Not working
+
+---
+
+**5. SSID Configuration – 2.4GHz Band**
+
+* **SSID:** FUSASIS 2.4GHz
+* **Broadcast:** Enabled
+* **Maximum Devices:** 24
+* **Authentication Mode:** WPA2-PreSharedKey
+* **Encryption Mode:** AES
+* **WPA Pre-Shared Key:** `FUS@SiSWIFIJesusDiaz5GHz`
+* **WPS Mode:** PBC
+
+---
+
+**6. SSID Configuration – 5GHz Band**
+
+* **SSID:** FUSASIS 5GHz
+* **Broadcast:** Enabled
+* **Maximum Devices:** 5
+* **Authentication Mode:** WPA2-PreSharedKey
+* **Encryption Mode:** AES
+* **WPA Pre-Shared Key:** `FUS@SiSWIFIJesusDiaz5GHz`
+
+---
+
+**7. Setup Instructions:**
+To ensure proper connectivity:
+
+* Power off the FUSASIS device.
+* Connect it to the primary router using an RJ45 cable.
+* After the connection is established, power the device back on.
+
+---
+
+**8. Additional Notes:**
+
+* The broadcast SSID may need to be changed for better identification or security.
+* Currently, access to the main portal is unavailable.
+* Wi-Fi Key for both bands: `FUS@SiSWIFIJesusDiaz5GHz`
+
+---
