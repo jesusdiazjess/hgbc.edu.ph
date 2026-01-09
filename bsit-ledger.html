@@ -887,7 +887,7 @@
               <div class="container">
                 <header>
                   <h1>Transparency Report for Foundation 2026</h1>
-                  <p class="date">Report Generated: <i>As of January 09, 2026, 01:28</i></p>
+                  <p class="date">Report Generated: <i>As of January 09, 2026, 05:43</i></p>
                 </header>
 
                 <div class="summary-grid">
@@ -903,43 +903,117 @@
 
                   <div class="card remaining">
                     <h3>Remaining Funds</h3>
-                    <p>₱11,533.30</p>
+                    <!--<p>₱11,533.30</p>-->
+                    <p>₱33.30</p>
                   </div>
                 </div>
 
                 <section>
                   <h2>Transaction Records</h2>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2025-12-31</td>
-                        <td>Christmas Party</td>
-                        <td>₱12,080.00</td>
-                        <td>Collected</td>
-                      </tr>
+                  <div class="table-wrapper">
+                    <table class="responsive-table">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Description</th>
+                          <th>Amount</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-label="Date">2025-12-31</td>
+                          <td data-label="Description">Christmas Party</td>
+                          <td data-label="Amount">₱12,080.00</td>
+                          <td data-label="Type">Collected</td>
+                        </tr>
+                        <tr>
+                          <td data-label="Date">2025-12-31</td>
+                          <td data-label="Description">Christmas Party</td>
+                          <td data-label="Amount">₱4,445.50</td>
+                          <td data-label="Type">Expense</td>
+                        </tr>
+                        <tr>
+                          <td data-label="Date">2026-01-06</td>
+                          <td data-label="Description">Foundation Day</td>
+                          <td data-label="Amount">ongoing</td>
+                          <td data-label="Type">ongoing</td>
+                        </tr>
 
-                      <tr>
-                        <td>2025-12-31</td>
-                        <td>Christmas Party</td>
-                        <td>₱4,445.50</td>
-                        <td>Expense</td>
-                      </tr>
-                      <tr>
-                        <td>2026-01-06</td>
-                        <td>Foundation Day</td>
-                        <td>ongoing</td>
-                        <td>ongoing</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        <tr>
+                          <td data-label="Date">2026-01-09</td>
+                          <td data-label="Description">Foundation Day</td>
+                          <td data-label="Amount">₱11,500.00</td>
+                          <td data-label="Type">Please be advised that the cash withdrawal was completed and overseen by Mr. Raffy.</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <style>
+                    .table-wrapper {
+                      width: 100%;
+                      overflow-x: auto;
+                    }
+
+                    .responsive-table {
+                      width: 100%;
+                      border-collapse: collapse;
+                      font-size: 14px;
+                    }
+
+                    .responsive-table th,
+                    .responsive-table td {
+                      padding: 12px;
+                      border: 1px solid #ddd;
+                      text-align: left;
+                    }
+
+                    .responsive-table thead {
+                      background: rgba(10, 89, 247, 0.2);
+                    }
+
+                    .responsive-table tbody tr:hover {
+                      background-color: #f9f9f9;
+                    }
+
+                    /* Mobile view */
+                    @media (max-width: 768px) {
+                      .responsive-table thead {
+                        display: none;
+                      }
+
+                      .responsive-table,
+                      .responsive-table tbody,
+                      .responsive-table tr,
+                      .responsive-table td {
+                        display: block;
+                        width: 100%;
+                      }
+
+                      .responsive-table tr {
+                        margin-bottom: 15px;
+                        border: 1px solid #ddd;
+                        padding: 10px;
+                        border-radius: 6px;
+                        background: #fff;
+                      }
+
+                      .responsive-table td {
+                        border: none;
+                        padding: 6px 0;
+                        position: relative;
+                      }
+
+                      .responsive-table td::before {
+                        content: attr(data-label);
+                        font-weight: bold;
+                        display: block;
+                        margin-bottom: 4px;
+                        color: #555;
+                      }
+                    }
+                  </style>
                   <style>
                     table {
                       width: 100%;
@@ -1187,7 +1261,7 @@
             <br>
 
             <p class="indented-paragraph">
-              The remaining funds have been deposited into the IT Department bank account (GoTyme Bank) to be allocated for upcoming projects, maintenance, and other departmental needs. Transparency and accountability remain our top priorities.
+              The remaining funds have been deposited into the IT Department (HGBC Accounting Office) to be allocated for upcoming projects, maintenance, and other departmental needs. Transparency and accountability remain our top priorities.
             </p><br><br>
             <h2>Contributors</h2>
             <p style="text-align: justify;">We extend our heartfelt gratitude to all contributors for their unwavering support and dedication to the growth and development of the IT Department.</p>
@@ -1195,7 +1269,7 @@
 
 
             The following are the contributors from each year level who have actively supported the IT Department:<br>
-            <i>As of January 09, 2026, 01:28</i>
+            <i>As of January 09, 2026, 05:43</i>
 
             <div class="emui_master_subtitle table-wrapper">
               <table class="responsive-table">
