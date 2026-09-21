@@ -900,7 +900,7 @@
               font-size: 18px;
               line-height: 1.5;
               margin: 0;
-            }</style></article></main><div id="abandoned-notice-overlay"><div id="abandoned-notice-popup"><button id="abandoned-notice-close" aria-label="Close notice">×</button><div class="abandoned-notice-icon">⚠️</div><h2>This Website Is No Longer Maintained</h2><p>This site is currently inactive and is not being actively updated. Some information, links, or forms may be outdated or non-functional. For the latest updates, please contact the school directly.</p><button id="abandoned-notice-ok" class="abandoned-notice-btn">I Understand</button></div></div><style>#abandoned-notice-overlay {
+            }</style></article></main><div id="abandoned-notice-overlay"><div id="abandoned-notice-popup"><button id="abandoned-notice-close" aria-label="Close notice">×</button><div class="abandoned-notice-gif" aria-hidden="true"><div class="server"><div class="server-light"></div><div class="server-light"></div><div class="server-light"></div></div><div class="server-face">×_×</div><div class="signal signal-1">•</div><div class="signal signal-2">•</div><div class="signal signal-3">•</div></div><h2>Website Is No Longer Maintained</h2><p>This site is currently inactive and is not being actively updated. Some information, links, or forms may be outdated or non-functional. For the latest updates, please contact the school directly.</p><button id="abandoned-notice-ok" class="abandoned-notice-btn">I Understand</button></div></div><style>#abandoned-notice-overlay {
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.55);
@@ -922,10 +922,9 @@
     #abandoned-notice-popup {
       position: relative;
       max-width: 460px;
-      /* Slightly wider to accommodate larger text nicely */
       width: 100%;
       text-align: center;
-      padding: 36px 32px 32px;
+      padding: 30px 32px 32px;
       border-radius: 18px;
       background: rgba(255, 255, 255, 0.75);
       box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
@@ -940,24 +939,153 @@
       transform: translateY(0);
     }
 
-    .abandoned-notice-icon {
+    /* Animated "website down" GIF-style graphic */
+    .abandoned-notice-gif {
       position: relative;
+      width: 120px;
+      height: 90px;
+      margin: 0 auto 8px;
+    }
+
+    .server {
+      position: absolute;
+      left: 25px;
+      top: 12px;
+      width: 70px;
+      height: 58px;
+      background: #343a40;
+      border-radius: 8px;
+      border: 3px solid #6c757d;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, .2);
+    }
+
+    .server::before,
+    .server::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 5px;
+      background: #6c757d;
+      border-radius: 5px;
+    }
+
+    .server::before {
+      top: 14px;
+    }
+
+    .server::after {
+      bottom: 14px;
+    }
+
+    .server-light {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ff3b30;
+      right: 10px;
+      animation: serverBlink 1s infinite alternate;
+    }
+
+    .server-light:nth-child(1) {
+      top: 12px;
+    }
+
+    .server-light:nth-child(2) {
+      top: 26px;
+      animation-delay: .25s;
+    }
+
+    .server-light:nth-child(3) {
+      top: 40px;
+      animation-delay: .5s;
+    }
+
+    .server-face {
+      position: absolute;
+      left: 35px;
+      top: 29px;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      animation: sadServer 1.5s ease-in-out infinite;
+    }
+
+    .signal {
+      position: absolute;
+      color: #ff3b30;
+      font-weight: bold;
+      animation: signalFade 1.5s infinite;
+    }
+
+    .signal-1 {
+      right: 13px;
+      top: 5px;
+    }
+
+    .signal-2 {
+      right: 4px;
+      top: -3px;
+      animation-delay: .3s;
+    }
+
+    .signal-3 {
+      right: -5px;
+      top: -11px;
+      animation-delay: .6s;
+    }
+
+    @keyframes serverBlink {
+      from {
+        opacity: .25;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes sadServer {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(3px);
+      }
+    }
+
+    @keyframes signalFade {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .abandoned-notice-icon {
       font-size: 2.6rem;
-      /* Increased from 2.2rem */
       margin-bottom: 10px;
     }
 
     #abandoned-notice-popup h2 {
       margin: 0 0 14px;
       font-size: 1.45rem;
-      /* Increased from 1.2rem */
       color: #1a1a1a;
     }
 
     #abandoned-notice-popup p {
       margin: 0 0 24px;
       font-size: 1.05rem;
-      /* Increased from 0.95rem */
       line-height: 1.55;
       color: #333;
     }
@@ -969,12 +1097,10 @@
       color: #1a237e;
       font-weight: 700;
       padding: 12px 28px;
-      /* Increased padding slightly */
       border: none;
       border-radius: 8px;
       cursor: pointer;
       font-size: 1.05rem;
-      /* Increased from 0.95rem */
       transition: background 0.2s;
     }
 
@@ -989,7 +1115,6 @@
       background: none;
       border: none;
       font-size: 1.6rem;
-      /* Increased from 1.4rem */
       line-height: 1;
       cursor: pointer;
       color: #555;
@@ -999,7 +1124,6 @@
       color: #000;
     }
 
-    /* Dark mode support */
     .dark-mode #abandoned-notice-popup {
       background: rgba(35, 39, 42, 0.85);
       border: 1px solid rgba(60, 60, 80, 0.4);
@@ -1107,7 +1231,7 @@
                             width: 48px;
                             max-width: 60px;
                         }
-                    }</style><script>const currentYear=(new Date).getFullYear();document.getElementById("currentYear").textContent=currentYear</script></div></footer></html><!-- #FOOTER--><div id="cookie-consent" style="position: fixed; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); color: #222; box-shadow: 0 -2px 16px rgba(0,0,0,0.13); padding: 14px 0; z-index: 9999; display: none; opacity: 1; transition: opacity 0.5s cubic-bezier(.4,0,.2,1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"><div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 0 10px;"><div style="flex: 1 1 220px; font-size: 14px; min-width: 0; display: inline;">To provide you with the best possible experience, we use cookies and similar technologies. Some cookies are necessary to make our website work and cannot be refused. You can accept or decline the use of additional cookies, which we use only to improve your experience. None of this data will ever be sold or used for marketing. Read our <a href="privacy.html" style="color: #1a3fa6; text-decoration: underline; display: inline;">Privacy Policy</a>.</div><div style="display: flex; gap: 8px; flex-shrink: 0;"><button id="cookie-deny" style="background: #eee; color: #222; border: none; border-radius: 5px; padding: 7px 14px; cursor: pointer; font-size: 14px;">Decline</button> <button id="cookie-accept" style="background: #1a3fa6; color: #fff; border: none; border-radius: 5px; padding: 7px 14px; cursor: pointer; font-size: 14px;">Accept</button></div></div></div><style>#cookie-consent {
+                    }</style><script>const currentYear=(new Date).getFullYear();document.getElementById("currentYear").textContent=currentYear</script></div></footer></html><!-- #FOOTER--><div id="cookie-consent" style="position: fixed; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); color: #222; box-shadow: 0 -2px 16px rgba(0,0,0,0.13); padding: 14px 0; z-index: 9999; display: none; opacity: 1; transition: opacity 0.5s cubic-bezier(.4,0,.2,1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"><div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 0 10px;"><div style="flex: 1 1 120px; font-size: 14px; min-width: 0; display: inline;">To provide you with the best possible web experience, we use cookies and similar technologies. Some cookies are necessary to make our website work and cannot be refused. You can accept or decline the use of additional cookies, which we use only to improve your experience. None of this data will ever be sold or used for marketing. Read our <a href="privacy.html" style="color: #1a3fa6; text-decoration: underline; display: inline;">Privacy Policy</a>.</div><div style="display: flex; gap: 8px; flex-shrink: 0;"><button id="cookie-deny" style="background: #555; color: #fff; border: none; border-radius: 5px; padding: 7px 14px; cursor: pointer; font-size: 14px;">Decline</button> <button id="cookie-accept" style="background: #1a3fa6; color: #fff; border: none; border-radius: 5px; padding: 7px 14px; cursor: pointer; font-size: 14px;">Accept</button></div></div></div><style>#cookie-consent {
         animation: slideUpCookie 0.5s cubic-bezier(.4, 0, .2, 1);
     }
 
